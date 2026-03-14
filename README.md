@@ -13,8 +13,8 @@ Por lo que en la rama principal solo Encontrara la documentación general del re
 
 Los lenguajes Elegidos inicialmente son:
 
-* Go
-* C++
+* ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+* ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 sin embargo problablemente expandiremos la lista de lenguajes con fines educativos.
 
@@ -31,50 +31,52 @@ sin embargo problablemente expandiremos la lista de lenguajes con fines educativ
 * Operaciones básicas: declaración, inicialización, recorrido, modificación.
 
 
-## Actividades:
+### Actividades:
 * Declaración y creación de un arreglo
 * Declarar un arreglo de 10 enteros en cada lenguaje dado
 * Inicializarlo con valores aleatorios.
 
-## Recorrido e impresión
-* Recorrerlo usando bucle for clásico.
-* Recorrerlo usando un for-each o equivalente.
+1. Recorrido e impresión
+   * Recorrerlo usando bucle for clásico.
+   * Recorrerlo usando un for-each o equivalente.
 
 
-## Modificación
-* Cambiar todos los valores impares por cero.
-* Multiplicar todos los valores por su índice.
+2. Modificación
+   * Cambiar todos los valores impares por cero.
+   * Multiplicar todos los valores por su índice.
 
 
-## Búsqueda
-* Implementar búsqueda lineal para encontrar un valor en el arreglo.
+3. Búsqueda
+   * Implementar búsqueda lineal para encontrar un valor en el arreglo.
 
 
-## Comparativa
-* Los estudiantes explicarán la sintaxis y diferencias entre los lenguajes (estáticos vs dinámicos, tipado fuerte vs débil, etc.).
+4. Comparativa
+   * Los estudiantes explicarán la sintaxis y diferencias entre los lenguajes (estáticos vs dinámicos, tipado fuerte vs débil, etc.).
+
+---
+
+## 2. Matrices (Arrays bidimensionales)
+
+### Fundamentos:
+
+* Concepto de matriz.
+* Representación en memoria (fila-columna).
+* Declaración e inicialización.
+* Recorridos por filas y columnas.
+* Matrices irregulares
+
+### Actividades:
+
+1. Declaración e inicialización
+   * Crear una matriz 3x3 de enteros en lenguaje de programación
+   * Inicializar con valores del 1 al 9.
 
 
-
-2. Matrices (Arrays bidimensionales)
-Fundamentos:
-Concepto de matriz.
-Representación en memoria (fila-columna).
-Declaración e inicialización.
-Recorridos por filas y columnas.
-Matrices irregulares
+2. Recorrido
+   * Imprimir la matriz en forma de tabla.
+   * Recorrerla por columnas.
 
 
-Actividades:
-Declaración e inicialización
-Crear una matriz 3x3 de enteros en lenguaje de programación (Java)
-Inicializar con valores del 1 al 9.
-
-
-Recorrido
-Imprimir la matriz en forma de tabla.
-Recorrerla por columnas.
-
-
-Operaciones
-Sumar todos los elementos.
-Intercambiar la primera fila con la última.
+3. Operaciones
+   * Sumar todos los elementos.
+   * Intercambiar la primera fila con la última.
