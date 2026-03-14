@@ -1,0 +1,80 @@
+# Arreglos y Matrices 
+
+Este repositorio fue creado para realizar la entrega de un repositorio con la implementación de diferentes lenguajes de programación
+En el protocolo colaborativo de la unidad 1
+
+**Tutor:** Jhon Arrieta
+**Estudiante:** Kevin Manuel Gómez Rojas
+
+## Guia para navegar el repositorio
+
+Dado a que se manejaran diferentes lenguajes en este repositorio con el unico fin de implemmentar el manejo de algunas estructuras de datos, manejaremos ramas para cada lenguaje
+Por lo que en la rama principal solo Encontrara la documentación general del repositorio
+
+Los lenguajes Elegidos inicialmente son:
+
+* Go
+* C++
+
+sin embargo problablemente expandiremos la lista de lenguajes con fines educativos.
+
+---
+
+# Actividad
+
+## 1. Arreglos (Arrays)
+**Fundamentos:**
+* Concepto de arreglo.
+* Tipos de datos que puede almacenar.
+* Diferencia entre tamaño fijo y dinámico según el lenguaje.
+* Indexación y posiciones.
+* Operaciones básicas: declaración, inicialización, recorrido, modificación.
+
+
+## Actividades:
+* Declaración y creación de un arreglo
+* Declarar un arreglo de 10 enteros en cada lenguaje dado
+* Inicializarlo con valores aleatorios.
+
+## Recorrido e impresión
+* Recorrerlo usando bucle for clásico.
+* Recorrerlo usando un for-each o equivalente.
+
+
+## Modificación
+* Cambiar todos los valores impares por cero.
+* Multiplicar todos los valores por su índice.
+
+
+## Búsqueda
+* Implementar búsqueda lineal para encontrar un valor en el arreglo.
+
+
+## Comparativa
+* Los estudiantes explicarán la sintaxis y diferencias entre los lenguajes (estáticos vs dinámicos, tipado fuerte vs débil, etc.).
+
+
+
+2. Matrices (Arrays bidimensionales)
+Fundamentos:
+Concepto de matriz.
+Representación en memoria (fila-columna).
+Declaración e inicialización.
+Recorridos por filas y columnas.
+Matrices irregulares
+
+
+Actividades:
+Declaración e inicialización
+Crear una matriz 3x3 de enteros en lenguaje de programación (Java)
+Inicializar con valores del 1 al 9.
+
+
+Recorrido
+Imprimir la matriz en forma de tabla.
+Recorrerla por columnas.
+
+
+Operaciones
+Sumar todos los elementos.
+Intercambiar la primera fila con la última.
