@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func main() {
+func runArreglos() {
 
 	// Declarar arreglo
 	var arreglo [10]int
