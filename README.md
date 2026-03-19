@@ -4,7 +4,9 @@ Este repositorio fue creado para realizar la entrega de un repositorio con la im
 En el protocolo colaborativo de la unidad 1
 
 **Tutor:** Jhon Arrieta
-**Estudiante:** Kevin Manuel Gómez Rojas
+**Estudiantes:** 
+* Kevin Manuel Gómez Rojas cod: 7502420013
+* Gary José Castaño Molina cod: 7502420050
 
 ## Guia para navegar el repositorio
 
@@ -13,8 +15,10 @@ Por lo que en la rama principal solo Encontrara la documentación general del re
 
 Los lenguajes Elegidos inicialmente son:
 
-* ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-* ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+| Estudiante | Lenguaje 1 | Lenguaje 2|
+|------------|------------|-----------|
+| Kevin | ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white) | ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white) |
+| Gary | ![Typescript](https://img.shields.io/badge/Ts-00599C?style=for-the-badge&logo=Typescript&logoColor=white) |![Python](https://img.shields.io/badge/Py-yellow?style=for-the-badge&logo=Python&logoColor=white) 
 
 sin embargo problablemente expandiremos la lista de lenguajes con fines educativos.
 

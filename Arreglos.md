@@ -1,6 +1,7 @@
 # 📦 Arreglos (Arrays)
 
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 ---
 
@@ -23,25 +24,26 @@ Valor:   [ 5] [12] [ 8] [23] [ 1]
 
 Un arreglo puede almacenar cualquier tipo de dato primitivo o compuesto, siempre que todos los elementos sean del **mismo tipo**:
 
-| Tipo        | Ejemplo en Go          |
-|-------------|------------------------|
-| Enteros     | `[5]int`               |
-| Decimales   | `[5]float64`           |
-| Caracteres  | `[5]rune`              |
-| Booleanos   | `[5]bool`              |
-| Cadenas     | `[5]string`            |
+| Tipo        | Ejemplo en Go          | Ejemplo en C++           |
+|-------------|------------------------|--------------------------|
+| Enteros     | `[5]int`               | `int arr[5]`             |
+| Decimales   | `[5]float64`           | `float arr[5]`           |
+| Caracteres  | `[5]rune`              | `char arr[5]`            |
+| Booleanos   | `[5]bool`              | `bool arr[5]`            |
+| Cadenas     | `[5]string`            | `string arr[5]`          |
 
 ---
 
 ### 🔹 Tamaño fijo vs. dinámico según el lenguaje
 
-| Característica        | Go                                  |
-|-----------------------|-------------------------------------|
-| **Array estático**    | `[10]int` — tamaño fijo en compilación |
-| **Array dinámico**    | `[]int` (slice) — tamaño flexible   |
-| **Tipado**            | Fuertemente tipado                  |
+| Característica        | Go                                  | C++                                       |
+|-----------------------|-------------------------------------|-------------------------------------------|
+| **Array estático**    | `[10]int` — tamaño fijo en compilación | `int arr[10]` — tamaño fijo en compilación |
+| **Array dinámico**    | `[]int` (slice) — tamaño flexible   | `std::vector<int>` — tamaño flexible      |
+| **Tipado**            | Fuertemente tipado                  | Fuertemente tipado                        |
 
-> ⚠️ En **Go**, los arrays tienen tamaño fijo. Para arreglos dinámicos se usan los **slices** (`[]int`).
+> ⚠️ En **Go**, los arrays tienen tamaño fijo. Para arreglos dinámicos se usan los **slices** (`[]int`).  
+> ⚠️ En **C++**, los arrays nativos también son de tamaño fijo. Para tamaño dinámico se usa `std::vector<int>`.
 
 ---
 
@@ -104,6 +106,38 @@ func main() {
 }
 ```
 
+#### C++
+
+```cpp
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    // Semilla para valores aleatorios
+    srand(time(0));
+
+    // Declaración de arreglo de 10 enteros
+    int arreglo[10];
+
+    // Inicialización con valores aleatorios (entre 1 y 100)
+    for (int i = 0; i < 10; i++) {
+        arreglo[i] = rand() % 100 + 1;
+    }
+
+    cout << "Arreglo: ";
+    for (int i = 0; i < 10; i++) {
+        cout << arreglo[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
+```
+
+---
+
 ## 3. Recorrido e impresión
 
 ### 🔁 Recorrido con `for` clásico
@@ -116,6 +150,17 @@ for i := 0; i < len(arreglo); i++ {
     fmt.Printf("arreglo[%d] = %d\n", i, arreglo[i])
 }
 ```
+
+#### C++
+
+```cpp
+// For clásico en C++
+for (int i = 0; i < 10; i++) {
+    cout << "arreglo[" << i << "] = " << arreglo[i] << endl;
+}
+```
+
+---
 
 ### 🔁 Recorrido con `for-each` o equivalente
 
@@ -131,6 +176,16 @@ for indice, valor := range arreglo {
 for _, valor := range arreglo {
     fmt.Println(valor)
 }
+```
+
+#### C++ — usando `for` basado en rango (C++11)
+
+```cpp
+// For-each en C++ (range-based for)
+for (int valor : arreglo) {
+    cout << valor << " ";
+}
+cout << endl;
 ```
 
 > 💡 **Diferencia clave:** En Go, `range` devuelve tanto el índice como el valor. En C++, el for basado en rango solo devuelve el valor directamente (el índice no está disponible de forma directa).
@@ -152,6 +207,21 @@ for i := 0; i < len(arreglo); i++ {
 fmt.Println("Sin impares:", arreglo)
 ```
 
+#### C++
+
+```cpp
+for (int i = 0; i < 10; i++) {
+    if (arreglo[i] % 2 != 0) {
+        arreglo[i] = 0;
+    }
+}
+cout << "Sin impares: ";
+for (int v : arreglo) cout << v << " ";
+cout << endl;
+```
+
+---
+
 ### ✏️ Multiplicar todos los valores por su índice
 
 #### Go
@@ -162,6 +232,21 @@ for i := 0; i < len(arreglo); i++ {
 }
 fmt.Println("Multiplicado por índice:", arreglo)
 ```
+
+#### C++
+
+```cpp
+for (int i = 0; i < 10; i++) {
+    arreglo[i] = arreglo[i] * i;
+}
+cout << "Multiplicado por índice: ";
+for (int v : arreglo) cout << v << " ";
+cout << endl;
+```
+
+> 💡 **Nota:** El elemento en la posición `0` siempre resultará en `0` ya que cualquier número multiplicado por `0` es `0`.
+
+---
 
 ## 5. Búsqueda
 
@@ -200,6 +285,44 @@ func main() {
     }
 }
 ```
+
+#### C++
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int busquedaLineal(int arreglo[], int tamanio, int objetivo) {
+    for (int i = 0; i < tamanio; i++) {
+        if (arreglo[i] == objetivo) {
+            return i; // Retorna el índice donde se encontró
+        }
+    }
+    return -1; // No encontrado
+}
+
+int main() {
+    int arreglo[10] = {4, 15, 7, 23, 9, 42, 1, 88, 36, 17};
+    int objetivo = 42;
+
+    int resultado = busquedaLineal(arreglo, 10, objetivo);
+
+    if (resultado != -1) {
+        cout << "Valor " << objetivo << " encontrado en el índice " << resultado << endl;
+    } else {
+        cout << "Valor " << objetivo << " no encontrado" << endl;
+    }
+
+    return 0;
+}
+```
+
+**Salida esperada:**
+```
+Valor 42 encontrado en el índice 5
+```
+
+---
 
 ## 6. Comparativa entre lenguajes
 

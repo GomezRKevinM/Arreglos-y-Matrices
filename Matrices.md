@@ -1,6 +1,7 @@
 # 🗂️ Matrices (Arrays Bidimensionales)
 
 ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 ---
 
@@ -69,6 +70,28 @@ matrizDinamica := [][]int{
 }
 ```
 
+#### C++
+
+```cpp
+// Array 2D estático
+int matriz[3][3];
+
+// Con valores directos
+int matriz[3][3] = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+// Vector de vectores (tamaño dinámico)
+vector<vector<int>> matrizDinamica = {
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+```
+
+---
 
 ### 🔹 Recorridos por filas y columnas
 
@@ -124,6 +147,36 @@ for i := 0; i < len(irregular); i++ {
 }
 ```
 
+#### C++ — vector de vectores
+
+```cpp
+// Cada fila tiene diferente longitud
+vector<vector<int>> irregular = {
+    {1, 2},
+    {3, 4, 5, 6},
+    {7}
+};
+
+// Recorrido seguro con .size() dinámico
+for (int i = 0; i < irregular.size(); i++) {
+    for (int j = 0; j < irregular[i].size(); j++) {  // ← longitud por fila
+        cout << irregular[i][j] << " ";
+    }
+    cout << endl;
+}
+```
+
+**Representación visual:**
+```
+Fila 0: [ ][ ]
+Fila 1: [ ][ ][ ][ ]
+Fila 2: [ ]
+```
+
+> ⚠️ Los arrays estáticos `int matriz[3][3]` en C++ y `[3][3]int` en Go **no permiten** filas irregulares. Para esto se necesita el enfoque dinámico (`vector<vector<int>>` o `[][]int`).
+
+---
+
 ## 2. Actividades
 
 ### 📝 Declaración e inicialización — Matriz 3x3 con valores del 1 al 9
@@ -159,6 +212,34 @@ func main() {
 }
 ```
 
+#### C++
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Opción 1: Inicialización directa
+    int matriz[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    // Opción 2: Inicialización con bucle
+    int matrizBucle[3][3];
+    int valor = 1;
+
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            matrizBucle[i][j] = valor++;
+
+    return 0;
+}
+```
+
+---
+
 ## 3. Recorrido
 
 ### 🖨️ Imprimir la matriz en forma de tabla
@@ -179,6 +260,32 @@ func imprimirTabla(matriz [3][3]int) {
 }
 ```
 
+#### C++
+
+```cpp
+void imprimirTabla(int matriz[3][3]) {
+    cout << "┌─────────────┐" << endl;
+    for (int i = 0; i < 3; i++) {
+        cout << "│ ";
+        for (int j = 0; j < 3; j++)
+            printf("%3d", matriz[i][j]);
+        cout << "  │" << endl;
+    }
+    cout << "└─────────────┘" << endl;
+}
+```
+
+**Salida:**
+```
+┌─────────────┐
+│   1  2  3   │
+│   4  5  6   │
+│   7  8  9   │
+└─────────────┘
+```
+
+---
+
 ### 🔄 Recorrer por columnas
 
 #### Go
@@ -195,6 +302,29 @@ func recorrerPorColumnas(matriz [3][3]int) {
     }
 }
 ```
+
+#### C++
+
+```cpp
+void recorrerPorColumnas(int matriz[3][3]) {
+    cout << "Recorrido por columnas:" << endl;
+    for (int j = 0; j < 3; j++) {                // columna primero
+        cout << "Columna " << j << ": ";
+        for (int i = 0; i < 3; i++)              // luego fila
+            cout << matriz[i][j] << " ";
+        cout << endl;
+    }
+}
+```
+
+**Salida:**
+```
+Columna 0: 1 4 7
+Columna 1: 2 5 8
+Columna 2: 3 6 9
+```
+
+---
 
 ## 4. Operaciones
 
@@ -217,6 +347,23 @@ func sumarElementos(matriz [3][3]int) int {
 fmt.Println("Suma total:", sumarElementos(matriz)) // 45
 ```
 
+#### C++
+
+```cpp
+int sumarElementos(int matriz[3][3]) {
+    int suma = 0;
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            suma += matriz[i][j];
+    return suma;
+}
+
+// En main:
+cout << "Suma total: " << sumarElementos(matriz) << endl; // 45
+```
+
+---
+
 ### 🔃 Intercambiar la primera fila con la última
 
 #### Go
@@ -231,6 +378,37 @@ func intercambiarFilas(matriz *[3][3]int) {
 // En main:
 intercambiarFilas(&matriz)
 ```
+
+#### C++
+
+```cpp
+#include <algorithm>
+
+void intercambiarFilas(int matriz[3][3]) {
+    // C++ pasa arrays como puntero implícito, modifica el original directamente
+    swap_ranges(matriz[0], matriz[0] + 3, matriz[2]);
+}
+
+// En main:
+intercambiarFilas(matriz);
+```
+
+> 💡 **Diferencia clave:** En Go se puede intercambiar filas enteras con el swap idiomático `a, b = b, a` usando un puntero. En C++, `swap_ranges` de la STL hace el intercambio elemento a elemento de forma limpia.
+
+**Antes:**
+```
+[1][2][3]   ← fila 0
+[4][5][6]
+[7][8][9]   ← fila 2
+```
+**Después:**
+```
+[7][8][9]   ← fila 0
+[4][5][6]
+[1][2][3]   ← fila 2
+```
+
+---
 
 ## 5. Programa completo
 
@@ -299,6 +477,96 @@ func main() {
     imprimirTabla(matriz)
 }
 ```
+
+### C++
+
+```cpp
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+void imprimirTabla(int matriz[3][3]) {
+    cout << "┌─────────────┐" << endl;
+    for (int i = 0; i < 3; i++) {
+        cout << "│ ";
+        for (int j = 0; j < 3; j++)
+            printf("%3d", matriz[i][j]);
+        cout << "  │" << endl;
+    }
+    cout << "└─────────────┘" << endl;
+}
+
+void recorrerPorColumnas(int matriz[3][3]) {
+    for (int j = 0; j < 3; j++) {
+        cout << "Columna " << j << ": ";
+        for (int i = 0; i < 3; i++)
+            cout << matriz[i][j] << " ";
+        cout << endl;
+    }
+}
+
+int sumarElementos(int matriz[3][3]) {
+    int suma = 0;
+    for (int i = 0; i < 3; i++)
+        for (int j = 0; j < 3; j++)
+            suma += matriz[i][j];
+    return suma;
+}
+
+void intercambiarFilas(int matriz[3][3]) {
+    swap_ranges(matriz[0], matriz[0] + 3, matriz[2]);
+}
+
+int main() {
+    int matriz[3][3] = {
+        {1, 2, 3},
+        {4, 5, 6},
+        {7, 8, 9}
+    };
+
+    cout << "=== Matriz original ===" << endl;
+    imprimirTabla(matriz);
+
+    cout << "\n=== Recorrido por columnas ===" << endl;
+    recorrerPorColumnas(matriz);
+
+    cout << "\n=== Suma total ===" << endl;
+    cout << "Resultado: " << sumarElementos(matriz) << endl;
+
+    cout << "\n=== Intercambio de filas ===" << endl;
+    intercambiarFilas(matriz);
+    imprimirTabla(matriz);
+
+    return 0;
+}
+```
+
+**Salida de ambos programas:**
+```
+=== Matriz original ===
+┌─────────────┐
+│   1  2  3   │
+│   4  5  6   │
+│   7  8  9   │
+└─────────────┘
+
+=== Recorrido por columnas ===
+Columna 0: 1 4 7
+Columna 1: 2 5 8
+Columna 2: 3 6 9
+
+=== Suma total ===
+Resultado: 45
+
+=== Intercambio de filas ===
+┌─────────────┐
+│   7  8  9   │
+│   4  5  6   │
+│   1  2  3   │
+└─────────────┘
+```
+
+---
 
 ## 6. Comparativa entre lenguajes
 
