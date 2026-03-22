@@ -10,17 +10,15 @@ En el protocolo colaborativo de la unidad 1
 
 ## Guia para navegar el repositorio
 
-Dado a que se manejaran diferentes lenguajes en este repositorio con el unico fin de implemmentar el manejo de algunas estructuras de datos, manejaremos ramas para cada lenguaje
+Dado que se manejaran diferentes lenguajes en este repositorio con el unico fin de implemmentar el manejo de algunas estructuras de datos, manejaremos ramas para cada lenguaje
 Por lo que en la rama principal solo Encontrara la documentación general del repositorio
 
 Los lenguajes Elegidos inicialmente son:
 
-| Estudiante | Lenguaje 1 | Lenguaje 2|
-|------------|------------|-----------|
-| Kevin | ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white) | ![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white) |
+| Estudiante | Lenguaje 1                                                                                                | Lenguaje 2|
+|------------|-----------------------------------------------------------------------------------------------------------|-----------|
+| Kevin | ![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)                 | [![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](./Kevin/C++) |
 | Gary | ![Typescript](https://img.shields.io/badge/Ts-00599C?style=for-the-badge&logo=Typescript&logoColor=white) |![Python](https://img.shields.io/badge/Py-yellow?style=for-the-badge&logo=Python&logoColor=white) 
-
-sin embargo problablemente expandiremos la lista de lenguajes con fines educativos.
 
 ---
 

@@ -1,7 +1,3 @@
-//
-// Created by Songu on 18/03/2026.
-//
-
 #include "Arreglos.h"
 #include "NumberUtils.h"
 #include <iostream>
