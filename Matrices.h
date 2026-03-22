@@ -5,7 +5,11 @@
 
 
 namespace Matrices {
+    void run();
+
     void imprimirTable(std::vector<std::vector<int>> matriz);
+
+    void imprimirMatriz(std::vector<std::vector<int>> matriz);
 
     void recorrerPorColumnas(std::vector<std::vector<int>> matriz);
 
