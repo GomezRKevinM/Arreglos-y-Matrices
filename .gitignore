@@ -1,5 +1,7 @@
 #IDE-EC
 .idea/
+cmake-build-debug/
+cmake-build-debug-mingw/
+cmake-build-*/
 .vscode/
-cmake-build-debug
-cmake-build-debug-mingw
+
