@@ -16,11 +16,11 @@ namespace ARREGLOS {
         void recorrerForEach(std::vector<int> arreglo);
 
         // 2. Modificación
-        void cambiarImpares(std::vector<int> arreglo);
-        void multiplicarValuesIndices(std::vector<int> arreglo);
+        void cambiarImpares(std::vector<int>& arreglo);
+        void multiplicarValuesIndices(std::vector<int>& arreglo);
 
         // 3. Busqueda
-        void findValue(std::vector<int> arreglo, int valor);
+        bool findValue(std::vector<int> arreglo, int valor);
 
 }
 

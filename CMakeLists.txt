@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 4.1)
-project(Arreglos_y_Matrices)
-
-set(CMAKE_CXX_STANDARD 14)
-
-include_directories(.)
+project(Arreglos_y_Matrices VERSION 1.0 LANGUAGES CXX)
 
 add_executable(Arreglos_y_Matrices
         Arreglos.cpp
-        Arreglos.h
         Matrices.cpp
-        Matrices.h)
+        Main.cpp
+        NumberUtils.h
+)
+
+target_compile_features(Arreglos_y_Matrices PRIVATE cxx_std_20)
+target_include_directories(Arreglos_y_Matrices PRIVATE .)

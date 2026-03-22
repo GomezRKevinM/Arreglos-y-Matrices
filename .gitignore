@@ -1,3 +1,5 @@
 #IDE-EC
 .idea/
 .vscode/
+
+cmake-build-debug
