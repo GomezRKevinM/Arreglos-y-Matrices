@@ -32,3 +32,7 @@ numeros2.forEach((valor,index) => {
 })
 
 console.log("Nuevo arreglo:"+ numeros2);
+
+let posicion: number = Utils.encontrarElemento(numeros2, 0);
+
+console.log((posicion >= 0) ? `El elemento se encuentra en la posición ${posicion}` : "El elemento no se encuentra en el arreglo");

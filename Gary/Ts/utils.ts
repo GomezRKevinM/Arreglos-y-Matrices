@@ -21,5 +21,15 @@ export class Utils {
             }
         }
     }
+
+    static encontrarElemento(list: number[], elemento: number): number {
+    
+        for (let i = 0; i < list.length; i++) {
+            if (list[i] === elemento) {
+                return i;
+            }
+        }
+        return -1;
+    }
     
     }
