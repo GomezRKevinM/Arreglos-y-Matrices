@@ -12,6 +12,23 @@ for (let i = 0; i < numeros.length; i++) {
 }
 
 console.log("recorriendo por bucle ForEach");
-numeros.forEach((element, index) => {
-    console.log(`\tElemento ${index}: ${element}`);
+numeros.forEach((valor, index) => {
+    console.log(`\tElemento ${index}: ${valor}`);
 });
+
+Utils.modificarImpares(numeros);
+
+console.log(numeros);
+
+let numeros2: number[] = Utils.getRandomListInt(10, 1, 100);
+
+console.log("Nuevo arreglo:"+ numeros2);
+
+numeros2.forEach((valor,index) => {
+
+    numeros2[index] *= index;
+    console.log(`\tElemento ${index}: ${valor} * ${index} = ${numeros2[index]}`);
+
+})
+
+console.log("Nuevo arreglo:"+ numeros2);

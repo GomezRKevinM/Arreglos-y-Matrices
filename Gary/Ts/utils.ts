@@ -13,4 +13,13 @@ export class Utils {
         }
         return list;
     }
-}
+
+    static modificarImpares(list: number[]): void {
+        for (let i = 0; i < list.length; i++) {
+            if (list[i] % 2 !== 0) {
+                list[i] = 0;
+            }
+        }
+    }
+    
+    }
