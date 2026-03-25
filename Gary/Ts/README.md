@@ -1,1 +1,0 @@
-# README Sobre Actividad en Typescript
