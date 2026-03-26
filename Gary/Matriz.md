@@ -60,3 +60,65 @@ let irregular: number[][] = [
     [6]
 ];
 ```
+
+## Actividades
+### 1. Declaración e inicialización
+* Crear una matriz 3x3 de enteros en lenguaje de programación (Ts)
+* Inicializar con valores del 1 al 9.
+
+```typescript
+let matriz: number[][] = [];
+let contador = 1;
+for (let i = 0; i < 3; i++) {
+    matriz[i] = [];
+    for (let j = 0; j < 3; j++) {
+        matriz[i][j] = contador++;
+    }
+}
+console.log("Matriz inicial:");
+console.table(matriz);
+```
+
+### Recorrido
+
+* Imprimir la matriz en forma de tabla.
+```typescript
+for (let i = 0; i < matriz.length; i++) {
+    let fila = "";
+    for (let j = 0; j < matriz[i].length; j++) {
+        fila += matriz[i][j] + "\t";
+    }
+    console.log(fila);
+}
+```
+
+* Recorrerla por columnas.
+```typescript
+for (let j = 0; j < 3; j++) {
+    let columna = "";
+    for (let i = 0; i < 3; i++) {
+        columna += matriz[i][j] + "\t";
+    }
+    console.log(columna);
+}
+```
+### Operaciones
+
+* Sumar todos los elementos.
+```typescript
+let suma = 0;
+for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+        suma += matriz[i][j];
+    }
+}
+console.log("Suma total de la matriz:", suma);
+```
+* Intercambiar la primera fila con la última.
+```typescript
+let temp = matriz[0];
+matriz[0] = matriz[2];
+matriz[2] = temp;
+console.log("Matriz después del intercambio:");
+console.table(matriz);
+```
