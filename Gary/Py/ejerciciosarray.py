@@ -1,5 +1,5 @@
 import random
-
+print("lista de 10 numeros enteros aleatorios")
 valores = []
 
 for i in range(10):
@@ -7,15 +7,16 @@ for i in range(10):
 
 print("Lista inicial:", valores)
 
-
+print("**********************************")
 print("recorriendo por bucle For")
 
 for i, valor in enumerate(valores):
     print(f"\tElemento {i}: {valor}")
 
+print("**********************************")
 for valor in valores:
     print(valor)
-
+print("**********************************")
 def modificar_impares(lista):
     for i in range(len(lista)):
         if lista[i] % 2 != 0:
@@ -24,6 +25,8 @@ def modificar_impares(lista):
 modificar_impares(valores)
 print("Lista modificada:", valores)
 
+print("**********************************")
+
 numeros2 = [10, 20, 30, 40]
 
 for index, valor in enumerate(numeros2):
@@ -31,6 +34,8 @@ for index, valor in enumerate(numeros2):
     print(f"\tElemento {index}: {valor} * {index} = {numeros2[index]}")
 
 print("Lista final:", numeros2)
+
+print("**********************************")
 
 def encontrar_elemento(valores, elemento):
     for i in range(len(valores)):
