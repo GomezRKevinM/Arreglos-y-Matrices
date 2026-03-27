@@ -246,7 +246,7 @@ else:
 ```
 Esta función recorre la lista elemento por elemento, comparando cada valor con el que se esta buscando. Si lo encuentra, devuelve la posición (índice), igual que en TypeScript. Si termina el recorrido y no lo encuentra, retorna -1, lo cual es una forma común de indicar que el elemento no existe en la lista.
 
-### 5. Comparativa (TypeScript)
+### 5. Comparativa 
 | Característica              | TypeScript 🟦                          | Python 🟨                       |
 | --------------------------- | -------------------------------------- | ------------------------------- |
 | Tipo de tipado              | Estático                               | Dinámico                        |

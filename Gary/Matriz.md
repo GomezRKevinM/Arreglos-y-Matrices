@@ -135,7 +135,7 @@ print("Matriz:")
 for fila in matriz:
     print(fila)
 ```
-### Recorrido
+### 2. Recorrido
 
 * Imprimir la matriz en forma de tabla.
 
@@ -182,7 +182,7 @@ for j in range(len(matriz[0])):
         print(matriz[i][j], end="\t")
     print()
 ```
-### Operaciones
+### 3. Operaciones
 
 * Sumar todos los elementos.
 
