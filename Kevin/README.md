@@ -25,3 +25,8 @@ Kevin
 |----------|---------|
 | [![C++](https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](./C++) | Arreglos y matrices en C++ |
 | [![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)](./Go) | Arreglos y matrices en Go |
+
+## Actividades desarrolladas
+
+1. [Arreglos](./Arreglos)
+2. [Matrices](./Matrices)
