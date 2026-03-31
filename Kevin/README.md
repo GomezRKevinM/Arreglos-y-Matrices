@@ -28,5 +28,5 @@ Kevin
 
 ## Actividades desarrolladas
 
-1. [Arreglos](./Arreglos)
-2. [Matrices](./Matrices)
+1. [Arreglos](./Arreglos.md)
+2. [Matrices](./Matrices.md)
